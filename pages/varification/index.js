@@ -25,6 +25,7 @@ export default function Index() {
       setBtncaption('Logout')
     }).catch((error) => {
       setMessage('not logined.')
+      console.log("error:" + error)
       setBtncaption(googlelogin)
     })
   }
