@@ -11,7 +11,7 @@ export default function RealTimeTest() {
   const mydata = []
   const [data, setData] = useState(mydata);
 
-  const [message, setMessage] = useState('logined: ' + auth.currentUser.displayName)
+  const [message, setMessage] = useState('logined: ' + auth.currentUser?.displayName)
   const router = useRouter()
 
   const goBack = () => {

@@ -41,7 +41,7 @@ export default function Home() {
     } else {
       mydata.push(
         <tr key="1">
-          <th colSpan="4">can't get data.</th>
+          <th colSpan="4">can&apos;t get data.</th>
         </tr>
       )
     }

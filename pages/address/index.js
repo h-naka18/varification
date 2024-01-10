@@ -72,7 +72,7 @@ export default function Index() {
         })
     } else {
       addresses.push(
-        <li key="1">can't get data.</li>
+        <li key="1">can&apos;t get data.</li>
       )
     }
   }, [message])

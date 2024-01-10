@@ -4,7 +4,7 @@ function usePersist(ky, initVal) {
   const key = "hooks:" + ky
   const value = () => {
     try {
-      const item = window.localStorage.getItem(key)
+      const item = typeof window !== 'undefined' ? window.localStorage.getItem(key) : null;
       return item ? JSON.parse(item) : initVal
     } catch (err) {
       console.log(err)
@@ -14,7 +14,7 @@ function usePersist(ky, initVal) {
   const setValue = (val) => {
     try {
       setSavedValue(val)
-      window.localStorage.setItem(key, JSON.stringify(val))
+      typeof window !== 'undefined' && window.localStorage.setItem(key, JSON.stringify(val))
     } catch (err) {
       console.log(err)
     }
